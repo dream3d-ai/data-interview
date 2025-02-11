@@ -1,0 +1,35 @@
+[project]
+name = "data"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Tony Francis", email = "tony@dream3d.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "aioboto3>=13.3.0",
+    "av>=14.0.1",
+    "boto3<1.36.0",
+    "datasets>=3.2.0",
+    "diskcache>=5.6.3",
+    "fastapi>=0.115.7",
+    "loguru>=0.7.3",
+    "modin[ray]>=0.32.0",
+    "pillow>=11.1.0",
+    "polars>=1.20.0",
+    "py-spy>=0.4.0",
+    "pylance>=0.22.0",
+    "ray[data,default]<2.38",
+    "s3fs>=2024.9.0",
+    "torch>=2.6.0",
+    "torchcodec>=0.1.1",
+    "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.48.1",
+    "typer>=0.15.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
