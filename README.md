@@ -32,14 +32,9 @@ In this assignment, you will design and implement a video processing pipeline th
 
 ## Setup Instructions
 
-1. **Prerequisites:**
-
-   - Install [FFmpeg](https://ffmpeg.org/) and ensure it is available in your system's `PATH`.
-   - Install [UV](https://docs.astral.sh/uv/).
-   - Install the dependencies using UV `uv sync`.
-
-2. **Running the Pipeline:**
-   Provide clear instructions (e.g., `python main.py`) on how the candidate can run and test your implementation.
+- Install [FFmpeg](https://ffmpeg.org/) and ensure it is available in your system's `PATH`.
+- Install [UV](https://docs.astral.sh/uv/).
+- Install the dependencies using UV `uv sync`.
 
 ## Additional Notes
 
