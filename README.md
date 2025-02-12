@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this assignment, you will design and implement a video processing pipeline that operates on the validation split of the Kinetics dataset, orchestrated by Ray. The pipeline will perform the following steps:
+In this assignment, you will design and implement a video processing pipeline that operates on the `validation` split of the Kinetics dataset (https://github.com/cvdfoundation/kinetics-dataset), orchestrated by Ray. Assume each node has 32GB of RAM and 8 CPU cores. The pipeline will perform the following steps:
 
 1. **Download Videos:**  
    Asynchronously download videos from a provided list of URLs using an HTTP client (e.g., `aiohttp`).
