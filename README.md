@@ -7,17 +7,14 @@ In this assignment, you will design and implement a video processing pipeline th
 1. **Download Videos:**  
    Efficiently download videos from a provided list of URLs using an HTTP client (e.g., `aiohttp`).
 
-2. **Transcode Videos:**  
-   Use `pyav` to transcode each downloaded video to 360p.
+2. **Transcode Videos and store in Lance format:**  
+   Aggregate metadata and video data and store it in a dataset in the [Lance format](https://lancedb.github.io/lance/index.html). Use `pyav` to transcode each downloaded video to 360p. Use your discretion on how to store the transcoded videos. Please explain your reasoning. The video data will be used in a pytorch dataloader which will decode the video on the fly.
 
-3. **Data Storage in Lance Format:**  
-   Aggregate metadata and video data and store it in a dataset in the [Lance format](https://lancedb.github.io/lance/index.html).
+3. **Extra: Depth Map Extraction:**  
+   Use a pre-trained monocular depth estimation model to extract a depth map from each video frame, and store it as a column in the Lance dataset. Again, explain your reasoning for your choice of model and how the extracted depth maps will be stored.
 
 4. **Distributed Processing with Ray:**  
-   Use [Ray](https://www.ray.io/) to distribute the processing tasks (e.g., downloading, transcoding, and depth extraction) across workers. This distributed approach should help improve processing efficiency, especially when working with a larger set of data.
-
-5. **Extra: Depth Map Extraction:**  
-   Use a pre-trained monocular depth estimation model to extract a depth map from each video frame, and store it as a column in the Lance dataset.
+   Use [Ray Data](https://docs.ray.io/en/latest/data/data.html) to distribute the processing tasks (e.g., downloading, transcoding, and depth extraction) across workers. This distributed approach should help improve processing efficiency, especially when working with a larger set of data.
 
 ## Deliverables
 
