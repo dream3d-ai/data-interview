@@ -1,4 +1,4 @@
-# Take-Home Assignment: Kinetics Depth Extraction Pipeline
+# Take-Home Assignment: Video Processing Pipeline
 
 ## Overview
 
