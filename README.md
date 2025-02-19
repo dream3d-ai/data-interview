@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this assignment, you will design and implement a video processing pipeline that operates on the `validation` split of the [Kinetics dataset](https://github.com/cvdfoundation/kinetics-dataset), orchestrated by [Ray Data](https://docs.ray.io/en/latest/data/data.html). Assume each node has 32GB of RAM and 8 CPU cores. The pipeline should perform the following steps:
+In this assignment, you will design and implement a highly-parallel video processing pipeline that operates on the `validation` split of the [Kinetics dataset](https://github.com/cvdfoundation/kinetics-dataset), orchestrated by [Ray Data](https://docs.ray.io/en/latest/data/data.html). Assume each node has 32GB of RAM and 8 CPU cores. The pipeline should perform the following steps:
 
 1. **Download Videos:**  
    Efficiently download videos from a provided list of URLs using an HTTP client (e.g., `aiohttp`).
@@ -13,7 +13,7 @@ In this assignment, you will design and implement a video processing pipeline th
 3. **Extra: Depth Map Extraction:**  
    Use a pre-trained monocular depth estimation model to extract a depth map from each video frame, and store it as a column in the Lance dataset. Again, explain your reasoning for your choice of model and how the extracted depth maps will be stored.
 
-4. **Distributed Processing with Ray:**  
+4. **Important: Distributed Processing with Ray:**  
    Use [Ray Data](https://docs.ray.io/en/latest/data/data.html) to distribute the processing tasks (e.g., downloading, transcoding, and depth extraction) across workers. This distributed approach should help improve processing efficiency, especially when working with a larger set of data.
 
 ## Deliverables
