@@ -10,11 +10,11 @@ In this assignment, you will design and implement a highly-parallel video proces
 2. **Transcode Videos and store in Lance format:**  
    Aggregate metadata and video data and store it in a dataset in the [Lance format](https://lancedb.github.io/lance/index.html). Use `pyav` to transcode each downloaded video to 360p. Use your discretion on how to store the transcoded videos. Please explain your reasoning. The video data will be used in a pytorch dataloader which will decode the video on the fly.
 
-3. **Extra: Depth Map Extraction:**  
-   Use a pre-trained monocular depth estimation model to extract a depth map from each video frame, and store it as a column in the Lance dataset. Again, explain your reasoning for your choice of model and how the extracted depth maps will be stored.
-
-4. **Important: Distributed Processing with Ray:**  
+3. **Important: Distributed Processing with Ray:**  
    Use [Ray Data](https://docs.ray.io/en/latest/data/data.html) to distribute the processing tasks (e.g., downloading, transcoding, and depth extraction) across workers. This distributed approach should help improve processing efficiency, especially when working with a larger set of data.
+
+4. **Extra: Depth Map Extraction:**  
+Use a pre-trained monocular depth estimation model to extract a depth map from each video frame, and store it as a column in the Lance dataset. Again, explain your reasoning for your choice of model and how the extracted depth maps will be stored.
 
 ## Deliverables
 
