@@ -5,7 +5,7 @@
 In this assignment, you will design and implement a highly-parallel video processing pipeline that operates on the `validation` split of the [Kinetics dataset](https://github.com/cvdfoundation/kinetics-dataset), orchestrated by [Ray Data](https://docs.ray.io/en/latest/data/data.html). Assume each node has 32GB of RAM and 8 CPU cores. The pipeline should perform the following steps:
 
 1. **Download Videos:**  
-   Efficiently download videos from a provided list of URLs using an HTTP client (e.g., `aiohttp`). For simplicity, we'll only process the first shard in the dataset `https://s3.amazonaws.com/kinetics/400/val/part_0.tar.gz`
+   Efficiently download videos from a provided list of URLs using an HTTP client (e.g., `aiohttp`). For testing, you can limit the data to the first shard.
 
 2. **Transcode Videos and store in Lance format:**  
    Aggregate metadata and video data and store it in a dataset in the [Lance format](https://lancedb.github.io/lance/index.html). Use `pyav` to transcode each downloaded video to 360p. Use your discretion on how to store the transcoded videos. Please explain your reasoning. The video data will be used in a pytorch dataloader which will decode the video on the fly.
